@@ -1,6 +1,6 @@
 # solis 4g reader to mqtt
 
-The script reads the solis 4g converter and push the data to a MQ server.
+The script reads the solis 4g converter and push the data to a MQTT server. This can then be shown in other tools like Home Assistant, ...
 
 
 ## Requirements
