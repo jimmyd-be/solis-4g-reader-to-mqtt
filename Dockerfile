@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 ADD solis.py .
 ADD requirements.txt .
 RUN pip install -r requirements.txt
-CMD [“python”, “./solis.py”]
+CMD ["python", ""./solis.py"]
