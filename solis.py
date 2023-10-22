@@ -17,7 +17,7 @@ class SolisData:
     self.today = 0
 
 mqtt_host = os.getenv('MQTT_HOST')
-mqtt_port = os.getenv('MQTT_PORT') # 1883
+mqtt_port = os.getenv('MQTT_PORT')  # 1883
 
 instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1)
 instrument.serial.baudrate = 9600
@@ -44,6 +44,6 @@ except Exception as e:
 
 if success == True:
     client = mqtt.Client()
-    client.connect(mqtt_host, mqtt_port, 60)
+    client.connect(mqtt_host, int(mqtt_port), 60)
     client.publish("solis", payload=json.dumps(data.__dict__), qos=0, retain=False)
     client.disconnect()
