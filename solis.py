@@ -1,6 +1,6 @@
 import minimalmodbus
 import serial
-import time
+import os
 import paho.mqtt.client as mqtt
 import json
 
@@ -16,8 +16,8 @@ class SolisData:
     self.allTime = 0
     self.today = 0
 
-mqtt_host = "localhost"
-mqtt_port = 1883
+mqtt_host = os.getenv('MQTT_HOST')
+mqtt_port = os.getenv('MQTT_PORT') # 1883
 
 instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1)
 instrument.serial.baudrate = 9600
