@@ -15,6 +15,19 @@ You need to connect port 3 of the Solis to port A of the MAX485 module and port 
 ## Software setup
 In my case I needed a driver for my MAX485 module. If you have the same please check [this site](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them).
 
+### Docker setup
+You just need to run one command to run Solis reader in docker
+```
+docker run --name Solis \
+        --restart always \
+        -e MQTT_HOST={ip adress of mqtt server} \
+        -e MQTT_PORT=1883 \
+        -v /dev/ttyUSB0:/dev/ttyUSB0 \
+        --privileged \
+        -d lonelobo0070/solis_4g_reader_to_mqtt:latest
+```
+
+### Manual setup
 Download the python file on your system and try to run it using ```python3 solis.py```.
 It is possible you need to install additional python modules. You can do this by calling ```pip3 install <module>```.
 
