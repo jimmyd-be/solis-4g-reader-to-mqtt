@@ -1,4 +1,4 @@
-FROM python:alpine3.17
+FROM python:3-alpine3.17
 ADD solis.py .
 ADD requirements.txt .
 RUN pip install -r requirements.txt
