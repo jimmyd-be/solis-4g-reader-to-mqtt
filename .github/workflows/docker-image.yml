@@ -33,3 +33,4 @@ jobs:
         context: ${{env.working-directory}}
         push: true
         platforms: linux/arm64, linux/arm/v7
+        tags: lonelobo0070/solis_4g_reader_to_mqtt:latest
