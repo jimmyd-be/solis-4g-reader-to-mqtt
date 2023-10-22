@@ -1,8 +1,8 @@
 import minimalmodbus
-import serial
 import os
 import paho.mqtt.client as mqtt
 import json
+import serial
 
 class SolisData:
   def __init__(self):

@@ -1,4 +1,4 @@
 paho-mqtt
 minimalmodbus
 PyYaml
-serial
+pyserial
